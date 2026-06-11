@@ -171,10 +171,9 @@
             <img class="illu" src="assets/img/illustrations/video/Clef.png" alt="">
           </div>
           <div class="docu-pack-body">
-            <span class="docu-badge docu-badge--pulse"><span class="docu-badge-dot"></span>Offre de lancement · Places limitées</span>
+            <span class="docu-badge">Offre de lancement · Limitée</span>
             <h3 class="docu-pack-name gold-text">Love Moment</h3>
             <p class="docu-pack-sub">2 jours de tournage · 2 vidéastes</p>
-            <p class="docu-pack-tagline">L'essentiel de votre journée, raconté avec sincérité et émotion.</p>
             <ul class="docu-pack-list">
               <li><span class="flare">✺</span>3 moments d'interview des futurs mariés & proches racontant votre histoire</li>
               <li><span class="flare">✺</span>Images des préparatifs</li>
@@ -184,11 +183,8 @@
             <div class="docu-pack-price">
               <span class="docu-strike">2 500€</span>
               <span class="docu-promo gold-text">800€</span>
-              <span class="docu-discount">-68%</span>
               <span class="docu-hint">Survolez pour révéler</span>
             </div>
-            <p class="docu-urgency">Quelques dates encore disponibles — réservez vite votre créneau</p>
-            <a class="docu-cta docu-cta--gold" href="#contact">Réserver cette offre</a>
           </div>
         </article>
 

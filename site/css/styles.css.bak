@@ -766,10 +766,8 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 .docu-pack-card--cinema .docu-pack-body .docu-badge,
 .docu-pack-card--cinema .docu-pack-body .docu-pack-sub,
-.docu-pack-card--cinema .docu-pack-body .docu-pack-tagline,
 .docu-pack-card--cinema .docu-pack-body .docu-pack-list li,
 .docu-pack-card--cinema .docu-pack-body .docu-hint,
-.docu-pack-card--cinema .docu-pack-body .docu-urgency,
 .docu-pack-card--cinema .docu-pack-body .docu-strike {
   color: rgba(255, 250, 239, .82);
 }
@@ -812,22 +810,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   border-color: var(--gold);
   color: var(--gold-deep);
 }
-.docu-badge--pulse {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.docu-badge-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--wine);
-  animation: docu-badge-pulse 1.8s ease-in-out infinite;
-}
-@keyframes docu-badge-pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: .45; }
-}
 .docu-pack-name {
   margin: 0 0 4px;
   font-family: var(--display);
@@ -844,13 +826,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   font-weight: 500;
   letter-spacing: .14em;
   text-transform: uppercase;
-}
-.docu-pack-tagline {
-  margin: -8px 0 16px;
-  color: var(--ink-soft);
-  font-size: 13px;
-  line-height: 1.6;
-  font-style: italic;
 }
 .docu-pack-list {
   list-style: none;
@@ -901,17 +876,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 .docu-pack-card:hover .docu-promo,
 .docu-pack-card:focus-within .docu-promo { opacity: 1; }
-.docu-discount {
-  display: inline-flex;
-  align-items: center;
-  padding: 3px 9px;
-  border-radius: 999px;
-  background: var(--wine);
-  color: var(--paper-soft);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: .04em;
-}
 .docu-hint {
   color: var(--muted);
   font-size: 10px;
@@ -922,14 +886,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 .docu-pack-card:hover .docu-hint,
 .docu-pack-card:focus-within .docu-hint { opacity: 0; }
-.docu-urgency {
-  margin: 10px 0 0;
-  color: var(--wine);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: .04em;
-  font-style: italic;
-}
 .docu-onreq {
   font-size: clamp(20px, 2.2vw, 28px);
   font-weight: 500;
@@ -956,14 +912,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .docu-cta:hover {
   background: var(--wine);
   transform: translateY(-2px);
-}
-.docu-cta--gold {
-  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
-  color: var(--ink);
-}
-.docu-cta--gold:hover {
-  background: var(--paper-soft);
-  color: var(--ink);
 }
 
 /* --- Pull-quote --- */

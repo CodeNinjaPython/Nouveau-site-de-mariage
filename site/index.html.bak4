@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jérémie & Jeannette | Prestations photo et vidéo de mariage</title>
+  <meta name="description" content="Prestations photo et vidéo de mariage en Île-de-France: formules élégantes, approche éditoriale et films poétiques pour raconter votre journée.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#accueil">Aller au contenu</a>
+
+  <header class="topbar" role="banner">
+    <a class="brand" href="#accueil">Jérémie & Jeannette</a>
+    <nav aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#gamme">Tarifs</a>
+      <a href="#docu">Docu Portrait</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="accueil">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Photo & vidéo de mariage</p>
+        <h1 class="accroche gold-text">votre histoire</h1>
+        <p class="sub">
+          Une présence douce, des images vraies, une direction artistique sensible.
+          Nous créons des souvenirs à la fois spontanés et cinématographiques,
+          du premier regard jusqu'aux dernières danses.
+        </p>
+        <div class="hero-actions">
+          <button id="heroInvite" class="invite" type="button">Découvrir les univers</button>
+          <a class="text-link" href="#gamme">Voir les tarifs</a>
+          <a class="mail" href="mailto:fvjeremie@gmail.com">fvjeremie@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <img class="hero-sheet hero-sheet-main" src="assets/img/packs/photo-video.png" alt="">
+        <img class="hero-sheet hero-sheet-back" src="assets/img/packs/photo.png" alt="">
+        <div class="hero-stats">
+          <span><b>120+</b> mariages</span>
+          <span><b>8 ans</b> d'expérience</span>
+          <span><b>72h</b> option express</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cinema" aria-label="Storytelling cinématographique">
+      <header class="page-head reveal">
+        <span class="script gold-text">en 3 actes</span>
+        <p class="mariage">Une narration pensée comme un film</p>
+      </header>
+
+      <div class="cinema-grid">
+        <article class="cinema-card reveal">
+          <span class="num">Acte 1</span>
+          <h3>La montée</h3>
+          <p>
+            Préparatifs, détails, regards: nous posons l'atmosphère avec des images fines,
+            pour installer l'émotion dès les premières minutes.
+          </p>
+        </article>
+        <article class="cinema-card reveal">
+          <span class="num">Acte 2</span>
+          <h3>Le serment</h3>
+          <p>
+            Les cérémonies deviennent le coeur du récit. Nous captons les gestes,
+            les réactions et les voix qui comptent pour vous deux.
+          </p>
+        </article>
+        <article class="cinema-card reveal">
+          <span class="num">Acte 3</span>
+          <h3>La célébration</h3>
+          <p>
+            Vin d'honneur, danse, fête: l'énergie monte et le film s'ouvre sur une fin
+            vibrante, fidèle à votre ambiance.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="prestations" class="choice" aria-label="Choisir votre univers">
+      <header class="page-head reveal">
+        <span class="script gold-text">prestations</span>
+        <p class="mariage">Choisissez l'univers qui vous ressemble</p>
+      </header>
+
+      <div class="choice-grid">
+        <article class="choice-card" data-univers="photo" tabindex="0" aria-label="Univers photo">
+          <div class="media">
+            <img class="illu" src="assets/img/illustrations/Bouquet.png" alt="Illustration photo">
+          </div>
+          <h3 class="gold-text">Photos</h3>
+          <p class="tag">Lumière naturelle & émotions</p>
+          <p class="from">À partir de <b>300€</b></p>
+        </article>
+
+        <article class="choice-card" data-univers="video" tabindex="0" aria-label="Univers vidéo">
+          <div class="media">
+            <img class="illu" src="assets/img/illustrations/video/Cupidon.png" alt="Illustration vidéo">
+          </div>
+          <h3 class="gold-text">Vidéos</h3>
+          <p class="tag">Film poétique & narration</p>
+          <p class="from">À partir de <b>300€</b></p>
+        </article>
+
+        <article class="choice-card" data-univers="mix" tabindex="0" aria-label="Univers photo et vidéo">
+          <div class="media">
+            <img class="illu" src="assets/img/illustrations/Bague.png" alt="Illustration photo et vidéo">
+          </div>
+          <h3 class="gold-text">Photos & Vidéos</h3>
+          <p class="tag">Couverture complète de la journée</p>
+          <p class="from">À partir de <b>500€</b></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gamme" class="gamme" hidden aria-label="Tarifs et options">
+      <header class="page-head reveal">
+        <span id="gammeScript" class="script gold-text">photos</span>
+        <p class="mariage">Sélectionnez une formule puis comparez les options</p>
+      </header>
+
+      <div class="gamme-shell reveal">
+        <div id="gammeSwitch" class="gamme-switch" role="tablist" aria-label="Univers de prestation">
+          <button type="button" role="tab" data-univers="photo" aria-pressed="true" class="is-active">Photos</button>
+          <button type="button" role="tab" data-univers="video" aria-pressed="false">Vidéos</button>
+          <button type="button" role="tab" data-univers="mix" aria-pressed="false">Photos & Vidéos</button>
+        </div>
+
+        <div class="gamme-main">
+          <div id="packsHost" class="packs" aria-live="polite"></div>
+          <div id="optionsHost" class="gamme-options" aria-label="Options"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docu" class="docu" aria-label="Docu portrait mariage">
+      <header class="page-head reveal">
+        <span class="script gold-text">docu portrait</span>
+        <p class="mariage">Un regard juste sur votre journée</p>
+      </header>
+
+      <blockquote class="docu-quote reveal">
+        <span class="flare">✦</span>
+        <p>
+          "On n&#39;est pas là pour poser les gens — on est là pour les <em>voir</em>.
+          Vous vivez. Nous racontons."
+        </p>
+        <cite>Jérémie & Jeannette</cite>
+      </blockquote>
+
+      <div class="docu-pillars">
+        <article class="docu-pillar reveal">
+          <img class="illu docu-pillar-illu" src="assets/img/illustrations/Bougie.png" alt="">
+          <h3>Lumière naturelle</h3>
+          <p>Pas de flash, pas de mise en scène. Nous travaillons avec la lumière du moment pour des images vivantes et atmosphériques.</p>
+        </article>
+        <article class="docu-pillar reveal">
+          <img class="illu docu-pillar-illu" src="assets/img/illustrations/Bouquet.png" alt="">
+          <h3>Les détails qui comptent</h3>
+          <p>La bague sur la table de nuit, les mains des grand-parents entrelacées, le sourire volé juste avant l&#39;entrée.</p>
+        </article>
+        <article class="docu-pillar reveal">
+          <img class="illu docu-pillar-illu" src="assets/img/illustrations/Noeud.png" alt="">
+          <h3>Discrétion totale</h3>
+          <p>Une présence légère, presque invisible. Vous et vos proches restez dans l&#39;instant sans poser, sans attendre.</p>
+        </article>
+        <article class="docu-pillar reveal">
+          <img class="illu docu-pillar-illu" src="assets/img/illustrations/Tenue.png" alt="">
+          <h3>Direction artistique</h3>
+          <p>Cadrage, composition, séquençage: chaque livrable pensé comme un objet éditorial cohérent.</p>
+        </article>
+      </div>
+
+      <div class="docu-timeline reveal">
+        <h3 class="docu-timeline-title">Votre journée, vue de notre côté</h3>
+        <ol class="timeline-steps">
+          <li><img class="illu" src="assets/img/illustrations/Chaussure.png" alt=""><div><strong>Les préparatifs</strong><span>Habillage, détails, échanges discrets avant la cérémonie.</span></div></li>
+          <li><img class="illu" src="assets/img/illustrations/Bague.png" alt=""><div><strong>Les cérémonies</strong><span>Mairie, religieuse ou laïque — chaque regard et geste capté.</span></div></li>
+          <li><img class="illu" src="assets/img/illustrations/Champagne.png" alt=""><div><strong>Le vin d&#39;honneur</strong><span>Retrouvailles, rires, bulles et portraits spontanés.</span></div></li>
+          <li><img class="illu" src="assets/img/illustrations/Gateau.png" alt=""><div><strong>La fête</strong><span>L&#39;énergie monte, la nuit s&#39;emballe — nous restons jusqu&#39;au bout.</span></div></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="contact" aria-label="Contact">
+    <img class="corner bl" src="assets/img/illustrations/Noeud.png" alt="">
+    <img class="corner r" src="assets/img/illustrations/Champagne.png" alt="">
+
+    <h2 class="gold-text reveal">contact</h2>
+    <div class="contact-actions reveal">
+      <a class="mail" href="mailto:contact@jeremie-jeannette.fr">Envoyer un email</a>
+      <a class="tel" href="tel:+33600000000">+33 6 00 00 00 00</a>
+    </div>
+    <form id="contactForm" class="contact-form reveal" aria-label="Formulaire de contact">
+      <div class="field">
+        <label for="prenom">Prénoms</label>
+        <input id="prenom" name="prenom" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="dateMariage">Date du mariage</label>
+        <input id="dateMariage" name="dateMariage" type="date" required>
+      </div>
+      <div class="field">
+        <label for="univers">Prestation souhaitée</label>
+        <select id="univers" name="univers" required>
+          <option value="">Choisir</option>
+          <option value="Photos">Photos</option>
+          <option value="Vidéos">Vidéos</option>
+          <option value="Photos & Vidéos">Photos & Vidéos</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Parlez-nous de votre journée, du lieu, de l'ambiance..."></textarea>
+      </div>
+      <button class="invite" type="submit">Envoyer la demande</button>
+      <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="zone reveal">Basés en Île-de-France · Déplacements dans toute la France</p>
+    <p class="sign gold-text reveal">Jérémie & Jeannette</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Les Fonts :
+Intitulé de page : Pretty Dahlia
+Nom des prestation titre : Copperplate Gothic Bold
+Descriptions des prestations : LEMONMILK
+Les prix : LEMONMILK regular
+Les pastilles : FcoFlares
+Les option en bas de page : Copperplate Gothic Bold
+
+
+Les illustrations sont associer au diffèrent pack :
+Vidéo seul
+Photo Seul
+Vidéo et Photo
+Pack Documntaires
+
+
+
+Page d’accueil avec phrase d’accroche :
+qui avec un mouvement de souris de grande ampleur fait afficher les 3 options de prestation (photo/vidéo/mix) dans un zoom stylé ou un glissement zoom comme sur le site Apple ou genre une transition presque invisible pour arriver sur les 3 options : photo , vidéo et photo/video
+
+en cliquant sur 1 option, ça se divise pour montrer la game globale et les différents tarifs :
+les différents tarifs ne sont pas d’tailler , il faut glisser sa souris dessus pour comprendre le prix. On voit le pack sélectionné et les autres sur les côtés sans détail.
+
+( on voit clairement les 2 autres prestations mais en plus petit dans un onglet à côté ou de part et d'autre )
+s
+

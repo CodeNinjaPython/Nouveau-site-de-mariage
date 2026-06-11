@@ -211,3 +211,20 @@ if (contactForm) {
     status.textContent = 'Votre messagerie va s ouvrir avec votre demande pre-remplie.';
   });
 }
+
+/* ---------- Menu mobile ---------- */
+const navToggle = $('.nav-toggle');
+const primaryNav = $('#primaryNav');
+if (navToggle && primaryNav) {
+  const closeNav = () => {
+    primaryNav.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+  };
+  navToggle.addEventListener('click', () => {
+    const open = primaryNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+  primaryNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+}

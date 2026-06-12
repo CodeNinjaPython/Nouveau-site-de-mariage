@@ -470,11 +470,11 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .choice-card:hover .media img { transform: translateY(-10px) scale(1.08) rotate(-2deg); }
 .choice-card h3 {
   align-self: end;
-  margin: 28px 0 8px;
+  margin: 18px 0 8px;
   font-family: var(--script);
   font-size: clamp(48px, 5vw, 72px);
   font-weight: 400;
-  line-height: .9;
+  line-height: 1.2;
 }
 .choice-card .tag { color: var(--wine); }
 .choice-card .from {
@@ -715,9 +715,8 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .docu-pack-card {
   position: relative;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(280px, 1.12fr) minmax(0, .88fr);
-  gap: 0;
+  display: flex;
+  flex-direction: column;
   border: 1px solid rgba(184, 139, 54, .28);
   border-radius: 24px;
   background: rgba(255, 255, 255, .84);
@@ -737,15 +736,15 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 .docu-pack-illu {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  min-height: 100%;
+  gap: 18px;
   background:
     radial-gradient(circle at 50% 60%, rgba(240, 210, 138, .32), transparent 68%),
     linear-gradient(160deg, rgba(255,250,235,.6), rgba(225,210,178,.2));
-  border-radius: 24px 0 0 24px;
-  padding: 30px 24px 24px;
+  border-radius: 24px 24px 0 0;
+  padding: 22px 28px;
 }
 .docu-pack-card--cinema .docu-pack-illu {
   background:
@@ -782,18 +781,18 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 .docu-pack-illu img {
   align-self: center;
-  width: min(100%, 210px);
+  width: min(40%, 150px);
   height: auto;
   opacity: .9;
   transition: transform .5s var(--ease), opacity .35s ease;
 }
 .docu-pack-card--cinema .docu-pack-illu img {
-  width: min(100%, 240px);
+  width: min(40%, 170px);
   opacity: .98;
   filter: drop-shadow(0 8px 22px rgba(0, 0, 0, .20));
 }
 .docu-pack-card--prestige .docu-pack-illu img {
-  width: min(100%, 235px);
+  width: min(40%, 165px);
 }
 
 .docu-pack-card--cinema .docu-pack-pack-body,
@@ -1153,13 +1152,10 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: 260px;
-  gap: 22px 18px;
-  width: min(100% - 40px, 1380px);
+  grid-auto-flow: dense;
+  gap: 28px 24px;
+  width: min(100% - 40px, 1200px);
   margin: 40px auto 0;
-}
-.galerie-grid--small {
-  grid-auto-rows: 220px;
-  margin: 16px auto 0;
 }
 .gal-item {
   position: relative;
@@ -1233,18 +1229,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .gal-tall { grid-row: span 2; }
 .gal-wide { grid-column: span 2; }
 
-.galerie-sub {
-  position: relative;
-  width: min(100% - 40px, 1380px);
-  margin: 40px auto 0;
-}
-.galerie-sub-title {
-  font-family: var(--script);
-  font-size: clamp(36px, 4vw, 56px);
-  color: var(--gold);
-  line-height: 1;
-  margin: 0 0 4px;
-}
 
 /* --- Doodles décoratifs --- */
 .doodle {
@@ -1277,15 +1261,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   height: auto;
   color: var(--gold-deep);
   opacity: .55;
-}
-.doodle-crown {
-  top: -34px;
-  left: -8px;
-  width: 64px;
-  height: auto;
-  color: var(--gold-deep);
-  opacity: .6;
-  transform: rotate(-8deg);
 }
 .doodle-star {
   width: 30px;
@@ -1352,7 +1327,6 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   .gal-wide { grid-column: span 1; }
   .doodle-cloud, .doodle-flower { width: 56px; }
   .doodle-heart { width: 26px; }
-  .doodle-crown { width: 46px; }
 }
 @media (max-width: 480px) {
   .galerie-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
@@ -1368,15 +1342,16 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   padding: 96px 22px 110px;
   border-top: 1px solid var(--line);
   background:
-    linear-gradient(rgba(45, 36, 24, .72), rgba(45, 36, 24, .78)),
-    url('../assets/img/textures/gold-liquid.png') center / cover;
-  color: var(--paper-soft);
+    radial-gradient(circle at 16% 12%, rgba(184, 139, 54, .12), transparent 32rem),
+    radial-gradient(circle at 88% 88%, rgba(87, 43, 46, .07), transparent 28rem),
+    linear-gradient(180deg, #fbf8f3, #f2ede3 60%, #efe7d9);
+  color: var(--ink);
   text-align: center;
 }
 .contact .corner {
   position: absolute;
   width: clamp(120px, 18vw, 250px);
-  opacity: .16;
+  opacity: .22;
   pointer-events: none;
   filter: sepia(.3);
 }
@@ -1398,13 +1373,14 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 14px;
   width: min(100% - 40px, 860px);
   margin: 26px auto 0;
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, .24);
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, .6);
   border-radius: 22px;
-  background: rgba(248, 241, 230, .08);
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0 22px 70px rgba(63, 42, 16, .08);
   backdrop-filter: blur(6px);
 }
 .contact-form .field {
@@ -1417,7 +1393,7 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   grid-column: 1 / -1;
 }
 .contact-form label {
-  color: rgba(248, 241, 230, .82);
+  color: var(--ink-soft);
   font-size: 10px;
   font-weight: 500;
   letter-spacing: .14em;
@@ -1428,16 +1404,22 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .contact-form textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, .26);
+  border: 1px solid var(--line);
   border-radius: 12px;
-  background: rgba(255, 255, 255, .12);
-  color: var(--paper-soft);
+  background: rgba(255, 255, 255, .9);
+  color: var(--ink);
   font: inherit;
   font-size: 12px;
 }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(248, 241, 230, .62);
+  color: var(--muted);
 }
 .contact-form select option {
   color: var(--ink);
@@ -1445,27 +1427,22 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .contact-form .invite {
   width: fit-content;
   margin-top: 4px;
-  background: var(--paper-soft);
-  color: var(--ink);
 }
 .form-status {
   margin: 0;
   align-self: center;
-  color: rgba(248, 241, 230, .88);
+  color: var(--ink-soft);
   font-size: 11px;
   letter-spacing: .06em;
-}
-.contact .mail {
-  background: var(--paper-soft);
-  color: var(--ink);
 }
 .contact .tel {
   display: inline-flex;
   align-items: center;
   min-height: 48px;
   padding: 0 22px;
-  border: 1px solid rgba(255, 255, 255, .28);
+  border: 1px solid rgba(45, 36, 24, .16);
   border-radius: 999px;
+  color: var(--ink);
   font-size: clamp(18px, 3vw, 32px);
   font-weight: 500;
   letter-spacing: .06em;
@@ -1473,7 +1450,7 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 .contact .zone {
   margin: 24px 0 0;
-  color: rgba(248, 241, 230, .78);
+  color: var(--ink-soft);
 }
 .contact .sign {
   margin: 42px 0 0;
@@ -1586,18 +1563,15 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   .packs.three {
     grid-template-columns: 1fr;
   }
-  .docu-pack-card {
-    grid-template-columns: 180px 1fr;
-  }
   .docu-pack-illu {
-    padding: 22px 16px 18px;
+    padding: 18px 16px;
   }
   .docu-pack-illu-copy { max-width: 11ch; }
   .docu-pack-illu-line { font-size: 10px; }
   .docu-pack-illu img,
   .docu-pack-card--cinema .docu-pack-illu img,
   .docu-pack-card--prestige .docu-pack-illu img {
-    width: min(100%, 160px);
+    width: min(35%, 110px);
   }
   .docu-quote,
   .docu-timeline {

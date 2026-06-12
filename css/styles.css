@@ -216,6 +216,7 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 .hero .accroche {
   max-width: 9ch;
   margin: 0;
+  padding-left: .08em;
   font-family: var(--script);
   font-size: clamp(78px, 13vw, 168px);
   font-weight: 400;
@@ -348,6 +349,7 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 .page-head .script {
   display: block;
+  padding-left: .08em;
   font-family: var(--script);
   font-size: clamp(68px, 10vw, 138px);
   line-height: .82;

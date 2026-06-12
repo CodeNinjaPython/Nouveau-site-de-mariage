@@ -358,10 +358,12 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 }
 
 .choice {
+  position: relative;
   padding: 18px 0 108px;
 }
 
 .cinema {
+  position: relative;
   padding: 26px 0 88px;
 }
 .cinema-grid {
@@ -1142,13 +1144,14 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
 
 /* ===== GALERIE ===== */
 .galerie {
+  position: relative;
   padding: 26px 0 96px;
 }
 .galerie-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: 260px;
-  gap: 10px;
+  gap: 22px 18px;
   width: min(100% - 40px, 1380px);
   margin: 40px auto 0;
 }
@@ -1157,15 +1160,18 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   margin: 16px auto 0;
 }
 .gal-item {
+  position: relative;
   margin: 0;
-  overflow: hidden;
   border-radius: 14px;
   background: rgba(0,0,0,.06);
+  transition: transform .35s var(--ease), box-shadow .35s ease;
 }
 .gal-item img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 14px;
   transition: transform .6s var(--ease), filter .4s ease;
   filter: saturate(.92);
 }
@@ -1173,10 +1179,60 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   transform: scale(1.04);
   filter: saturate(1.08);
 }
+
+/* --- Effet scrapbook : photos légèrement inclinées --- */
+.galerie-grid .gal-item:nth-child(6n+1) { transform: rotate(-1.4deg); }
+.galerie-grid .gal-item:nth-child(6n+2) { transform: rotate(1deg); }
+.galerie-grid .gal-item:nth-child(6n+3) { transform: rotate(-0.7deg); }
+.galerie-grid .gal-item:nth-child(6n+4) { transform: rotate(1.6deg); }
+.galerie-grid .gal-item:nth-child(6n+5) { transform: rotate(-1.1deg); }
+.galerie-grid .gal-item:nth-child(6n) { transform: rotate(0.9deg); }
+.gal-item:hover {
+  transform: rotate(0deg) translateY(-5px) !important;
+  box-shadow: 0 18px 40px rgba(63, 42, 16, .18);
+  z-index: 5;
+}
+
+/* --- Washi tape --- */
+.gal-item.tape::before {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 76px;
+  height: 26px;
+  background: repeating-linear-gradient(45deg,
+    rgba(184, 139, 54, .55) 0 8px,
+    rgba(247, 240, 222, .65) 8px 16px);
+  border: 1px solid rgba(255, 255, 255, .4);
+  opacity: .9;
+  transform: translateX(-50%) rotate(-5deg);
+  box-shadow: 0 3px 6px rgba(63, 42, 16, .18);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* --- Punaise --- */
+.gal-item.pin::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #8fc7ec, #2f6f9e 75%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .35), inset -2px -2px 3px rgba(0, 0, 0, .25);
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
 .gal-tall { grid-row: span 2; }
 .gal-wide { grid-column: span 2; }
 
 .galerie-sub {
+  position: relative;
   width: min(100% - 40px, 1380px);
   margin: 40px auto 0;
 }
@@ -1188,16 +1244,120 @@ button { border: 0; font: inherit; cursor: pointer; color: inherit; }
   margin: 0 0 4px;
 }
 
+/* --- Doodles décoratifs --- */
+.doodle {
+  position: absolute;
+  color: var(--ink-soft);
+  opacity: .5;
+  pointer-events: none;
+  z-index: 1;
+}
+.doodle-cloud {
+  top: -18px;
+  right: 6%;
+  width: 90px;
+  height: auto;
+  transform: rotate(4deg);
+}
+.doodle-heart {
+  top: 50%;
+  right: 1%;
+  width: 38px;
+  height: auto;
+  color: var(--wine);
+  opacity: .6;
+  transform: rotate(-8deg);
+}
+.doodle-flower {
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: auto;
+  color: var(--gold-deep);
+  opacity: .55;
+}
+.doodle-crown {
+  top: -34px;
+  left: -8px;
+  width: 64px;
+  height: auto;
+  color: var(--gold-deep);
+  opacity: .6;
+  transform: rotate(-8deg);
+}
+.doodle-star {
+  width: 30px;
+  height: auto;
+  color: var(--gold);
+  opacity: .6;
+}
+.doodle-rings {
+  width: 64px;
+  height: auto;
+  color: var(--ink-soft);
+  opacity: .45;
+}
+
+/* Doodles — placements par section */
+.hero .doodle-star {
+  top: 10%;
+  left: 3%;
+  transform: rotate(-10deg);
+}
+.hero .doodle-heart {
+  top: auto;
+  right: auto;
+  bottom: 8%;
+  left: 2%;
+  transform: rotate(10deg);
+}
+.cinema .doodle-rings {
+  top: -8px;
+  right: 5%;
+  transform: rotate(-6deg);
+}
+.choice .doodle-flower {
+  top: -14px;
+  bottom: auto;
+  left: auto;
+  right: 4%;
+  width: 64px;
+  transform: rotate(8deg);
+}
+.docu .doodle-cloud {
+  top: 0;
+  left: 2%;
+  width: 70px;
+}
+.docu .doodle-star {
+  top: auto;
+  left: auto;
+  bottom: 8%;
+  right: 3%;
+}
+.contact .doodle-star {
+  top: 8%;
+  left: 6%;
+  color: var(--gold);
+  opacity: .5;
+}
+
 @media (max-width: 1040px) {
   .galerie-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 760px) {
   .galerie-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
   .gal-wide { grid-column: span 1; }
+  .doodle-cloud, .doodle-flower { width: 56px; }
+  .doodle-heart { width: 26px; }
+  .doodle-crown { width: 46px; }
 }
 @media (max-width: 480px) {
   .galerie-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
   .gal-tall { grid-row: span 1; }
+  .galerie-grid .gal-item { transform: none !important; }
+  .gal-item.tape::before, .gal-item.pin::after { display: none; }
+  .doodle { display: none; }
 }
 
 .contact {
